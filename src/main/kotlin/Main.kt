@@ -20,7 +20,7 @@ suspend fun login(credentials: AuthParams, poolParams: PoolParams): AdminInitiat
         return idp.adminInitiateAuth(request)
     }
 }
-@Suppress("InvalidPackageDeclaration")
+@Suppress("TooGenericExceptionCaught")
 fun main() = runBlocking {
     val authParams = AuthParams.fromEnv()
     val poolParams = PoolParams.fromEnv()
