@@ -3,6 +3,7 @@ kotlin = "1.9.23"
 
 [libraries]
 cognitoidentityprovider = {module = "aws.sdk.kotlin:cognitoidentityprovider", version = "1.2.10"}
+logback-classic = { module = "ch.qos.logback:logback-classic", version =  "1.4.14" }
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.23.6" }

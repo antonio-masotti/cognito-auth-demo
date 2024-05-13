@@ -11,8 +11,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
     implementation(deps.cognitoidentityprovider)
+    implementation(deps.logback.classic)
+    testImplementation(kotlin("test"))
 }
 
 tasks.test {
