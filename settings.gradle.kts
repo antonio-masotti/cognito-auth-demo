@@ -3,3 +3,7 @@ plugins {
 }
 rootProject.name = "cognito-auth-demo"
 
+dependencyResolutionManagement {
+    defaultLibrariesExtensionName = "deps"
+}
+

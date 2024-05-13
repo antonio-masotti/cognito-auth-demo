@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
+    alias(deps.plugins.kotlin.jvm)
+    alias(deps.plugins.detekt)
 }
 
 group = "de.bikeleasing"
@@ -11,6 +12,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation(deps.cognitoidentityprovider)
 }
 
 tasks.test {
@@ -18,4 +20,8 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
+}
+
+tasks.named("check") {
+    dependsOn("detekt")
 }
